@@ -36,27 +36,41 @@ class App extends Component {
               onLeftIconButtonTouchTap={this.handleToggle}
               />
             <Drawer docked={false} open={this.state.open} onRequestChange={(open) => this.setState({open})}>
-              <MenuItem>
-                <Link to="/" >Home</Link>
-              </MenuItem>
-              <MenuItem>
-                <Link to="/logos" >Logos</Link>
-              </MenuItem>
-              <MenuItem>
-                <Link to="/posters" >Posters</Link>
-              </MenuItem>
-              <MenuItem>
-                <Link to="/letterhead" >Letterhead</Link>
-              </MenuItem>
-              <MenuItem>
-                <Link to="/share-a-story" >Share a Story</Link>
-              </MenuItem>
-              <MenuItem>
-                <Link to="/service-request-form" >Service Request Form</Link>
-              </MenuItem>
-              <MenuItem>
-                <Link to="/tutorial" >Tutorial</Link>
-              </MenuItem>
+              <Link to="/" >
+                <MenuItem onTouchTap={this.handleClose}>
+                  Home
+                </MenuItem>
+              </Link>
+              <Link to="/logos" >
+                <MenuItem onTouchTap={this.handleClose}>
+                  Logos
+                </MenuItem>
+              </Link>
+              <Link to="/posters" >
+                <MenuItem onTouchTap={this.handleClose}>
+                  Posters
+                </MenuItem>
+              </Link>
+              <Link to="/letterhead" >
+                <MenuItem onTouchTap={this.handleClose}>
+                  Letterhead
+                </MenuItem>
+              </Link>
+              <Link to="/share-a-story" >
+                <MenuItem onTouchTap={this.handleClose}>
+                  Share a Story
+                </MenuItem>
+              </Link>
+              <Link to="/service-request-form" >
+                <MenuItem onTouchTap={this.handleClose}>
+                  Service Request Form
+                </MenuItem>
+              </Link>
+              <Link to="/tutorial" >
+                <MenuItem onTouchTap={this.handleClose}>
+                  Tutorial
+                </MenuItem>
+              </Link>
             </Drawer>
 
             <Route exact path="/" render={() => <h1>Home view</h1>} />
