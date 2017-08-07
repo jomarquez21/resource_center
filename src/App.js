@@ -2,7 +2,7 @@
 import React, { Component } from 'react';
 
 // Dependencies Material
-import { BrowserRouter, Route } from 'react-router-dom';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import injectTapEventPlugin from 'react-tap-event-plugin';
 import {MuiThemeProvider, getMuiTheme} from 'material-ui/styles';
 import fusTheme from './fusTheme';
@@ -37,18 +37,20 @@ class App extends Component {
             
             <SideNav />
 
-            <Route exact path="/" component={Home} />
-            <Route exact path="/logos-poster" component={LogosPosters} />
-            <Route exact path="/logos" component={Logos} />
-            <Route exact path="/posters" component={Posters}/>
-            <Route exact path="/letterhead" component={Letterhead} />
-            <Route exact path="/share-a-story" component={Story} />
-            <Route exact path="/planning-guide" component={PlanningGuide} />
-            <Route exact path="/services" component={Services} />
-            <Route exact path="/glossary" component={Glossary} />
-            <Route exact path="/service-request-form" component={ServiceRequest} />
-            <Route exact path="/tutorial" component={Tutorial} />
-            <Route component={NotFound} />
+            <Switch>
+              <Route exact path="/" component={Home} />
+              <Route path="/logos-poster" component={LogosPosters} />
+              <Route path="/logos" component={Logos} />
+              <Route path="/posters" component={Posters}/>
+              <Route path="/letterhead" component={Letterhead} />
+              <Route path="/share-a-story" component={Story} />
+              <Route path="/planning-guide" component={PlanningGuide} />
+              <Route path="/services" component={Services} />
+              <Route path="/glossary" component={Glossary} />
+              <Route path="/service-request-form" component={ServiceRequest} />
+              <Route path="/tutorial" component={Tutorial} />
+              <Route component={NotFound} />
+            </Switch>
 
           </div>
         </MuiThemeProvider>
