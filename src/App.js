@@ -2,7 +2,7 @@
 import React, { Component } from 'react';
 
 // Dependencies Material
-import { BrowserRouter, Route, Link } from 'react-router-dom';
+import { BrowserRouter, Route, NavLink } from 'react-router-dom';
 
 import AppBar from 'material-ui/AppBar';
 import Drawer from 'material-ui/Drawer';
@@ -36,41 +36,41 @@ class App extends Component {
               onLeftIconButtonTouchTap={this.handleToggle}
               />
             <Drawer docked={false} open={this.state.open} onRequestChange={(open) => this.setState({open})}>
-              <Link to="/" >
+              <NavLink activeClassName="active" exact to="/" >
                 <MenuItem onTouchTap={this.handleClose}>
                   Home
                 </MenuItem>
-              </Link>
-              <Link to="/logos" >
+              </NavLink>
+              <NavLink activeClassName="active" to="/logos" >
                 <MenuItem onTouchTap={this.handleClose}>
                   Logos
                 </MenuItem>
-              </Link>
-              <Link to="/posters" >
+              </NavLink>
+              <NavLink activeClassName="active" to="/posters" >
                 <MenuItem onTouchTap={this.handleClose}>
                   Posters
                 </MenuItem>
-              </Link>
-              <Link to="/letterhead" >
+              </NavLink>
+              <NavLink activeClassName="active" to="/letterhead" >
                 <MenuItem onTouchTap={this.handleClose}>
                   Letterhead
                 </MenuItem>
-              </Link>
-              <Link to="/share-a-story" >
+              </NavLink>
+              <NavLink activeClassName="active" to="/share-a-story" >
                 <MenuItem onTouchTap={this.handleClose}>
                   Share a Story
                 </MenuItem>
-              </Link>
-              <Link to="/service-request-form" >
+              </NavLink>
+              <NavLink activeClassName="active" to="/service-request-form" >
                 <MenuItem onTouchTap={this.handleClose}>
                   Service Request Form
                 </MenuItem>
-              </Link>
-              <Link to="/tutorial" >
+              </NavLink>
+              <NavLink activeClassName="active" to="/tutorial" >
                 <MenuItem onTouchTap={this.handleClose}>
                   Tutorial
                 </MenuItem>
-              </Link>
+              </NavLink>
             </Drawer>
 
             <Route exact path="/" render={() => <h1>Home view</h1>} />
