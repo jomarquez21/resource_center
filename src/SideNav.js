@@ -1,49 +1,43 @@
+// Dependencies
 import React, { Component } from 'react';
-import { NavLink } from 'react-router-dom';
-import {Drawer, MenuItem, AppBar} from 'material-ui';
+import {Drawer, AppBar} from 'material-ui';
+
+// Components
+import SideBarItem from './SideBarItem';
 
 const links = [
-	{isExact: true, linkTo: '/', text: 'Home'},
-	{isExact: true, linkTo: '/logos', text: 'Logos'},
-	{isExact: true, linkTo: '/posters', text: 'Posters'},
-	{isExact: true, linkTo: '/letterhead', text: 'Letterhead'},
-	{isExact: true, linkTo: '/share-a-story', text: 'Share a Story'},
-	{isExact: true, linkTo: '/service-request-form', text: 'Service Request Form'},
-	{isExact: true, linkTo: '/tutorial', text: 'Tutorial'},
+  {isExact: true, linkTo: '/', text: 'Home'},
+  {isExact: true, linkTo: '/logos', text: 'Logos'},
+  {isExact: true, linkTo: '/posters', text: 'Posters'},
+  {isExact: true, linkTo: '/letterhead', text: 'Letterhead'},
+  {isExact: true, linkTo: '/share-a-story', text: 'Share a Story'},
+  {isExact: true, linkTo: '/service-request-form', text: 'Service Request Form'},
+  {isExact: true, linkTo: '/tutorial', text: 'Tutorial'},
 ]
 
 class SideNav extends Component {
-	state = {
-		open: false
-	}
-
-	handleToggle = () => this.setState({open: !this.state.open});
-  handleClose = () => this.setState({open: false});
-
-  SideBarItem = ({ link, text, isExact }) => {
-    return (
-      <NavLink activeClassName="active" exact={isExact} to={link} >
-        <MenuItem onTouchTap={this.handleClose} primaryText={text} />
-      </NavLink>
-    );
+  state = {
+    open: false
   }
 
+  handleToggle = () => this.setState({open: !this.state.open});
+  handleClose = () => this.setState({open: false});
+
   render() {
-  	const SideBarItem = this.SideBarItem;
-  	return (
-  		<div>
-  			<AppBar
+    return (
+      <div>
+        <AppBar
           title="Title"
           onLeftIconButtonTouchTap={this.handleToggle}
           />
 
         <Drawer docked={false} open={this.state.open} onRequestChange={(open) => this.setState({open})}>
-        	{
-        		links.map((link, i) => <SideBarItem link={link.linkTo} text={link.text} isExact={link.isExact} key={i} />)
-        	}
+          {
+            links.map((link, i) => <SideBarItem linkTo={link.linkTo} handleClose={this.handleClose} primaryText={link.text} isExact={link.isExact} key={i} />)
+          }
         </Drawer>
-  		</div>
-  	)
+      </div>
+    )
   }
 }
 
