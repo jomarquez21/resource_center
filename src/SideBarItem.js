@@ -9,6 +9,7 @@ class SideBarItem extends Component {
       <NavLink
         activeClassName='active'
         to={this.props.linkTo}
+        exact={this.props.isExact}
         >
         <MenuItem
           primaryText={this.props.primaryText}

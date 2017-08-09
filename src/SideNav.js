@@ -27,7 +27,7 @@ class SideNav extends Component {
     return (
       <div>
         <AppBar
-          title="Title"
+          title="Resource Center"
           onLeftIconButtonTouchTap={this.handleToggle}
           />
 
