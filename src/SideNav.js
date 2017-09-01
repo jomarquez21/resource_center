@@ -33,7 +33,17 @@ class SideNav extends Component {
 
         <Drawer docked={false} open={this.state.open} onRequestChange={(open) => this.setState({open})}>
           {
-            links.map((link, i) => <SideBarItem linkTo={link.linkTo} handleClose={this.handleClose} primaryText={link.text} isExact={link.isExact} key={i} />)
+            links.map((link, i) => {
+              return (
+                <SideBarItem 
+                  linkTo={link.linkTo} 
+                  handleClose={this.handleClose} 
+                  primaryText={link.text} 
+                  isExact={link.isExact} 
+                  key={i} 
+                />
+              )
+            })
           }
         </Drawer>
       </div>

@@ -25,6 +25,7 @@ import NotFound from './views/NotFound'
 
 // Styles
 import './App.css';
+import './styles/materialize-grid.css';
 
 injectTapEventPlugin();
 
