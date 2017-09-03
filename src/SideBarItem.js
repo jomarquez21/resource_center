@@ -15,7 +15,7 @@ class SideBarItem extends Component {
         <ListItem
           primaryText={this.props.primaryText}
           onTouchTap={this.props.handleClose}
-          hoverColor="#333"
+          hoverColor="#eee"
           />
       </NavLink>
     );
