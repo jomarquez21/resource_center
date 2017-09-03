@@ -1,14 +1,15 @@
 // Dependencies
-import React, { Component } from 'react';
+import React, { Component } from 'react'
 
 // Dependencies Material
-import { BrowserRouter, Route, Switch } from 'react-router-dom';
-import injectTapEventPlugin from 'react-tap-event-plugin';
-import {MuiThemeProvider, getMuiTheme} from 'material-ui/styles';
-import fusTheme from './fusTheme';
+import { BrowserRouter, Route, Switch } from 'react-router-dom'
+import injectTapEventPlugin from 'react-tap-event-plugin'
+import {MuiThemeProvider, getMuiTheme} from 'material-ui/styles'
+import fusTheme from './components/fusTheme'
 
 // Components
-import SideNav from './SideNav';
+import SideNav from './components/SideNav'
+
 /* Import Views */
 import Home from './views/Home'
 import LogosPosters from './views/LogosPosters'
@@ -24,7 +25,7 @@ import Tutorial from './views/Tutorial'
 import NotFound from './views/NotFound'
 
 // Styles
-import './App.css';
+import './styles/App.css';
 import './styles/materialize-grid.css';
 import './styles/responsive-text.css';
 
