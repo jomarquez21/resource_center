@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import GenericCard from './../components/GenericCard'
 import { CardTitle } from 'material-ui/Card'
+import FlatButton from 'material-ui/FlatButton'
 
 class Logos extends Component {
   render() {
@@ -20,6 +21,12 @@ class Logos extends Component {
             }
             cardTitle="Nice one"
             cardSubtitle="looking good"
+            actions={
+              <div>
+                <FlatButton label='Action1' />
+                <FlatButton label='Action2' />
+              </div>
+            }
           >
             Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
             tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,

@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { Card, CardHeader, CardMedia, CardTitle, CardText, CardActions } from 'material-ui/Card'
-import FlatButton from 'material-ui/FlatButton'
+
 
 export class GenericCard extends Component {
   render () {
@@ -8,7 +8,8 @@ export class GenericCard extends Component {
       headerTitle, headerSubtitle, headerAvatar,
       mediaImgSrc, mediaImgAlt,
       overlay,
-      cardTitle, cardSubtitle, children
+      cardTitle, cardSubtitle, 
+      children, actions
     } = this.props
 
     return (
@@ -28,14 +29,19 @@ export class GenericCard extends Component {
             <img src={mediaImgSrc} alt={mediaImgAlt} />
           </CardMedia>
         }
-        <CardTitle title={cardTitle} subtitle={cardSubtitle} />
+
+        {cardTitle && <CardTitle title={cardTitle} subtitle={cardSubtitle} />}
+
         <CardText>
           {children}
         </CardText>
-        <CardActions>
-          <FlatButton label='Action1' />
-          <FlatButton label='Action2' />
-        </CardActions>
+
+        {
+          actions &&
+          <CardActions className='card-actions'>
+            {actions}
+          </CardActions>
+        }
       </Card>
     )
   }

@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
-import {Card, CardText} from 'material-ui/Card'
 import TextField from 'material-ui/TextField'
-import RaisedButton from 'material-ui/RaisedButton'
+// import RaisedButton from 'material-ui/RaisedButton'
+import RaisedButton from '../MaterializeRaisedButton'
 
 class Story extends Component {
   render() {
@@ -60,7 +60,7 @@ class Story extends Component {
               fullWidth={true}
             />
           </div>
-          <div className="">
+          <div className="col s12">
             <RaisedButton label="Submit" primary={true}  />
           </div>
         </div>

@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import LetterheadCard from './../components/LetterheadCard'
+import FlatButton from 'material-ui/FlatButton'
 
 class Letterhead extends Component {
   render() {
@@ -30,21 +31,45 @@ class Letterhead extends Component {
             title='Card title'
             action='Action1'
             image='https://unsplash.it/600/776/?random=1'
+            actions={
+              <div>
+                <FlatButton label='Action1' />
+                <FlatButton label='Action2' />
+              </div>
+            }
           />
           <LetterheadCard
             title='Card title'
             action='Action1'
             image='https://unsplash.it/600/776/?random=2'
+            actions={
+              <div>
+                <FlatButton label='Action1' />
+                <FlatButton label='Action2' />
+              </div>
+            }
           />
           <LetterheadCard
             title='Card title'
             action='Action1'
             image='https://unsplash.it/600/776/?random=3'
+            actions={
+              <div>
+                <FlatButton label='Action1' />
+                <FlatButton label='Action2' />
+              </div>
+            }
           />
           <LetterheadCard
             title='Card title'
             action='Action1'
             image='https://unsplash.it/600/776/?random=4'
+            actions={
+              <div>
+                <FlatButton label='Action1' />
+                <FlatButton label='Action2' />
+              </div>
+            }
           />
         </div>
       </div>
